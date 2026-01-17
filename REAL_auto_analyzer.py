@@ -23,7 +23,6 @@ def run_batch():
     if not os.path.exists(AUDIO_FOLDER):
         print(f"오류: '{AUDIO_FOLDER}' 폴더가 없습니다."); return
     
-    # mixxpopv2의 파라미터 가져오기
     params = PROFILES.get(ANALYSIS_PROFILE)
     if not params:
         raise ValueError(f"프로필 '{ANALYSIS_PROFILE}'을 찾을 수 없습니다.")
@@ -126,4 +125,5 @@ def run_batch():
         print(f"\n!!!! CSV 저장 실패: {e} (엑셀 열려있는지 확인)")
 
 if __name__ == "__main__":
+
     run_batch()
